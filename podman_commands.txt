@@ -1,0 +1,25 @@
+# Check running or failed containers
+podman ps -a
+
+# Check logs from running or failed containers
+podman logs container_name
+
+# Stop containers and purge the images
+podman stop ai_rag_chatbot && podman rmi --force localhost/ai_rag_chatbot
+podman image prune
+
+# Build Dockerfile
+podman build -t 'ai_rag_chatbot:latest' .
+
+# Run Container
+podman run -d -it -p 49042:8000 --name "ai_rag_chatbot" ai_rag_chatbot:latest
+
+# Go inside running container
+podman exec -it ai_rag_chatbot /bin/sh
+
+
+# If the Docker container is already in Dockerhub, you can pull it with Podman, example:
+TMPDIR=~/podman_tmp_dir/ podman pull https://hub.docker.com/r/hyruleexplorer/ai_rag_chatbot:latest
+
+# And then run it like this:
+podman run -d -it --name "ai_rag_chatbot" https://hub.docker.com/r/hyruleexplorer/ai_rag_chatbot

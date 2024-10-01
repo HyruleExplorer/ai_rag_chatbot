@@ -1,0 +1,11 @@
+node_modules
+package-lock.json
+__pycache*
+*_doc.html
+*.pdf
+sql
+*_tree
+*.png
+.ipynb_checkpoints
+.env
+ddl.json

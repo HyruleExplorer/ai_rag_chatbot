@@ -1,0 +1,24 @@
+{
+  "name": "ai_rag_chatbot",
+  "version": "0.0.1",
+  "description": "Backend for an AI Chatbot with knowledge of Confluence documentation",
+  "author": "Simone Cinardo <vpervendetta1992@gmail.com",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "connect-timeout": "^1.9.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.1",
+    "python-shell": "^3.0.1",
+    "shelljs": "^0.8.4"
+  },
+  "devDependencies": {
+    "mocha": "~2.3.3",
+    "should": "~7.1.0",
+    "supertest": "~1.1.0"
+  }
+}

@@ -1,0 +1,14 @@
+version: "1.0"
+
+services:
+  ai_rag_chatbot:
+    container_name: ai_rag_chatbot
+    image: ai_rag_chatbot
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    command: npm start
+    ports:
+      - 8000:8000
